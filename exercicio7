@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercício 7</title>
+</head>
+<body>
+	<h1>Conversor de Texto para Maiúsculas</h1>
+	<label for="inputString">Digite um texto:</label>
+	<input type="text" id="inputString">
+	<button onclick="converterParaMaiusculas()">Converter para Maiúsculas</button>
+	<div id="resultado"></div>
+</body>
+<script>
+	function converterParaMaiusculas() {
+	var inputString = document.getElementById("inputString").value;
+	var outputString = inputString.toUpperCase();
+	document.getElementById("resultado").innerText = outputString;
+	}
+</script>
+</html>
