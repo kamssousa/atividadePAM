@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <style>
+
+        .destaque {
+            color: magenta;
+        }
+		.destaque1 {
+            color: purple;
+        }
+
+		
+    </style>
+</head>
+<body>
+	<h1>EXEMPLOS DE DOM</h1> <br>
+	
+    <!-- Exemplo document.getElementById() -->
+	<h2>ElementById</h2>
+    <div id="conteudo">
+        <p>Usando o ElementById - aciona o div com id='conteudo'</p> <br>
+    </div>
+	
+    <!-- Exemplo document.getElementsByTagName() -->
+	<h2>ElementsByTagName</h2>
+    <p>Usando o ElementsByTagName - (parágrafo 01).</p>
+    <p>Usando o ElementsByTagName - (parágrafo 02).</p>
+	<p>Aciona uma coleção contendo os dois parágrafos</p> <br>
+
+    <!-- Exemplo document.getElementsByClassName() -->
+	<h2>ElementsByClassName</h2>
+    <p class="destaque">Usando o ElementsByClassName (em destaque).</p>
+    <p>Usando o ElementsByClassName.</p>
+	<p>Aciona uma coleção contendo o primeiro parágrafo</p> <br>
+
+    <!-- Exemplo document.querySelector() -->
+	<h2>querySelector</h2>
+    <p class="destaque1">Usando o querySelector (em destaque).</p>
+    <p class="destaque1">Usando o querySelector (em destaque).</p>
+	<p>Aciona o primeiro parágrafo com a classe 'destaque'</p> <br>
+
+    <!-- Exemplo document.querySelectorAll() -->
+	<h2>querySelectorAll</h2>
+    <p class="destaque">Usando o querySelectorAll (em destaque).</p>
+    <p class="destaque">Usando o querySelectorAll (em destaque).</p>
+	<p>Aciona uma NodeList contendo os dois parágrafos com a classe 'destaque'</p>
+	
+    <!-- Script JavaScript -->
+    <script>
+        // Exemplo document.getElementById()
+        var conteudo = document.getElementById('conteudo');
+        console.log(conteudo);
+
+        // Exemplo document.getElementsByTagName()
+        var paragrafos = document.getElementsByTagName('p');
+        console.log(paragrafos);
+
+        // Exemplo document.getElementsByClassName()
+        var elementosDestaque = document.getElementsByClassName('destaque');
+        console.log(elementosDestaque);
+
+        // Exemplo document.querySelector()
+        var primeiroDestaque = document.querySelector('p.destaque');
+        console.log(primeiroDestaque);
+
+        // Exemplo document.querySelectorAll()
+        var todosDestaque = document.querySelectorAll('p.destaque');
+        console.log(todosDestaque);
+    </script>
+</body>
+</html>
