@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+	<style>
+		body {
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<h1> Tipos de funções</h1>
+	<p>Basta inspecionar a página</p>
+  <script>
+    // Função Nomeada
+    function FuncaoNomeada() {
+      console.log("Esta é uma função nomeada.");
+    }
+
+    // Chamando a função
+    FuncaoNomeada();
+
+    // Função Nomeada com argumento e retorno
+    function subtracao(a, b) {
+      return a - b;
+    }
+
+    // Chamando a função e exibindo o resultado
+    console.log("A subtracao de 3 e 1 é:", subtracao(3, 1));
+
+    // Função com Construtor
+    function Pessoa(nome, idade) {
+      this.nome = nome;
+      this.idade = idade;
+    }
+
+    // Criando uma instância da Pessoa
+    let pessoa1 = new Pessoa("Lelé", 25);
+
+    // Exibindo os dados da pessoa
+    console.log("Nome:", pessoa1.nome, "- Idade:", pessoa1.idade);
+
+    // Função Literal (variável)
+    let FuncaoLiteral = function() {
+      console.log("Esta é uma função literal.");
+    };
+
+    // Chamando a função
+    FuncaoLiteral();
+
+    // Função de Flecha (Arrow Function)
+    let ArrowFunction = () => {
+      console.log("Esta é uma função arrow.");
+    };
+
+    // Chamando a função
+    ArrowFunction();
+  </script>
+</body>
+</html>
