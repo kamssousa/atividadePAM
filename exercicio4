@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+	<style>
+		body {
+			background-color: lightgreen;
+		}
+		.highlight {
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Exemplo de evento onmouseover -->
+	<h2>OnMouseOver - Passe o mouse sobre o texto</h2>
+	<p id="paragrafo1" onmouseover="destacarElemento(this)">Lorem ipsum dolor sit amet. A quasi officiis At fugiat doloremque qui quasi enim qui earum laudantium.</p>
+
+	<!-- Exemplo de evento onfocus -->
+	<h2>OnFocus - Clique na caixa abaixo</h2>
+	<input type="text" id="campoTexto" onfocus="destacarElemento(this)" placeholder="Caixa">
+
+	<!-- Exemplo de evento onchange -->
+	<h2>OnChange - Selecione uma cor</h2>
+	<select id="selecao" onchange="mostrarSelecao()">
+		<option value="opcao1">Amarelo</option>
+		<option value="opcao2">Azul</option>
+		<option value="opcao3">Vermelho</option>
+	</select>
+	
+	<!-- Exemplo de evento onclick -->
+	<h2>OnClick - Clique no botão para mudar o texto</h2>
+	<button id="botao" onclick="alterarTexto()">Botão</button>
+	<p id="paragrafo">Hoje é quarta-feira</p>
+
+	<script>
+		// Função para destacar o elemento
+		function destacarElemento(elemento) {
+			elemento.classList.add("highlight");
+		}
+
+		// Função para mostrar a seleção do elemento
+		function mostrarSelecao() {
+			var selecao = document.getElementById("selecao");
+			var opcaoSelecionada = selecao.options[selecao.selectedIndex].text;
+			alert("Fruta selecionada: " + opcaoSelecionada);
+		}
+		// Função para alterar o texto do parágrafo
+		function alterarTexto() {
+        var paragrafo = document.getElementById("paragrafo");
+        paragrafo.textContent = "Hoje é terça-feira";
+    }
+	</script>
+
+</body>
+</html>
